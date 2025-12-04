@@ -203,7 +203,7 @@ const mixin = Base =>
 			distancePix = game.scenes.viewed.dimensions.distancePixels;
 			nightVisionDistance = game.settings.get("dnd5e-night-vision", "nightVisionDistance");
 
-			if (game.scenes.viewed.getFlag('dnd5e-night-vision', 'disable') === false) {
+			if (game.scenes.viewed.getFlag('dnd5e-night-vision', 'disable') !== true) {
 
 				result.dim += multiplier.dim * nightVisionDistance * distancePix;
 
